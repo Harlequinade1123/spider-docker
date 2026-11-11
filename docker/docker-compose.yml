@@ -1,0 +1,21 @@
+# devices は docker/compose.devices.yml (robots.yaml から自動生成) で追加される
+services:
+  spider:
+    image: spider-docker:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: spider
+    environment:
+      - DRY_RUN=${DRY_RUN:-1}
+      - JOY_SOURCE=${JOY_SOURCE:-udp}
+      - KING=${KING:-}
+      - SHIN=${SHIN:-}
+    volumes:
+      - ../robots.yaml:/config/robots.yaml:ro
+      - ../bags:/bags
+    ports:
+      - "5001:5001/udp"
+      - "5002:5002/udp"
+      - "5003:5003/udp"
+    tty: true

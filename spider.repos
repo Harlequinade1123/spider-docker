@@ -1,0 +1,9 @@
+repositories:
+  kingspider-ros:
+    type: git
+    url: https://github.com/Harlequinade1123/kingspider-ros.git
+    version: main
+  shin-spider-ros:
+    type: git
+    url: https://github.com/Harlequinade1123/shin-spider-ros.git
+    version: main
