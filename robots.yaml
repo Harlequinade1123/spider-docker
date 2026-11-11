@@ -1,0 +1,18 @@
+# 使えるロボットの一覧 (種別ごとに先頭から選ばれる)。起動時に台数を指定する:
+#   make up KING=1 SHIN=2   (未指定なら全台。合計 1〜3 台)
+# パッド番号 = 起動した順 (1台目 = js0 / UDP 5001, 2台目 = js1 / 5002, ...)
+# type: kingspider | shin_spider
+# serial: ホスト側のシリアル (Ubuntu は /dev/serial/by-id/... 推奨)
+robots:
+  - name: king1
+    type: kingspider
+    serial: /dev/ttyUSB0
+  - name: king2
+    type: kingspider
+    serial: /dev/ttyUSB1
+  - name: shin1
+    type: shin_spider
+    serial: /dev/ttyUSB2
+  - name: shin2
+    type: shin_spider
+    serial: /dev/ttyUSB3
