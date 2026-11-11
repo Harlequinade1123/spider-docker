@@ -1,0 +1,7 @@
+.env
+.venv/
+docker/compose.devices.yml
+__pycache__/
+bags/*
+!bags/.gitkeep
+.omc/

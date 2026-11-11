@@ -1,0 +1,4 @@
+# コンテナ内で動くファイルは常に LF (Windows の autocrlf で CRLF になると壊れる)
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
